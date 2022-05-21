@@ -1,9 +1,13 @@
 #!/bin/bash
 clear
-figlet -f smslant -c  "Crack-pathan" | lolcat
+if [ $(id -u) = 0 ]
+then
+sudo apt install lolcat figlet chntpw
+clear
+figlet -f smslant -c "Smell-Me"
+echo "                         Developed by Crack_pathan       "
 echo " "
-sleep 2
-if [ "$(ls -d Windows 2>&1 >/dev/null)" = "Windows" ]
+if [ "$(ls -d Windows)" = "Windows" ]
 then
 cd Windows/System32/config
 chntpw -l SAM | grep "|"
@@ -13,12 +17,23 @@ read -p "==> " user
 clear
 sleep 2
 chntpw -u "$user" SAM
-read -n 1 -r -s -p $'CAN YOU OPEN YOUR THIGHS FOR ME! PRESS ANY KEY TO CONTINUE ¯\_(ツ)_/¯..\n'
-echo "system rebooting........" | lolcat
-sleep 5
+echo " "
+read -p "You Want TO Reboot Your System (e.g y or n)  " reb
+if [ reb = y ]
+then
 reboot
 else
+echo " "
+echo " "
+echo "    Okay Good BYE ..."
+fi
+else
 echo "-------------------------------------------------------"
-echo "RUN THIS SCRIPT IN WINDOWS PARTITION ¯\_(ツ)_/¯..." | lolcat
+echo "RUN THIS SCRIPT IN WINDOWS PARTITION ¯\_(ツ)_/¯..."
 echo "-------------------------------------------------------"
+fi
+else
+echo " "
+echo "    RUN AS ROOT ¯\_(ツ)_/¯ " | lolcat
+echo " "
 fi
