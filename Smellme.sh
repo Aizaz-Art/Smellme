@@ -5,7 +5,7 @@ then
 sudo apt install lolcat figlet chntpw
 clear
 figlet -f smslant -c "Smell-Me"
-echo "                         Developed by Crack_pathan       "
+echo "                         Developed by Crack_pathan       " | lolcat
 echo " "
 if [ "$(ls -d Windows)" = "Windows" ]
 then
@@ -34,6 +34,6 @@ echo "-------------------------------------------------------"
 fi
 else
 echo " "
-echo "    RUN AS ROOT ¯\_(ツ)_/¯ " | lolcat
+echo "    RUN AS ROOT ¯\_(ツ)_/¯ "
 echo " "
 fi
