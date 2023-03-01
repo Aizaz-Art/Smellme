@@ -2,17 +2,25 @@
 clear
 if [ $(id -u) = 0 ]
 then
-sudo apt install lolcat figlet chntpw
+Hostname=$(whoami)
 clear
-figlet -f smslant -c "Smell-Me"
-echo "                         Developed by Crack_pathan       "
+red='\033[0;31m'
+yellow='\033[0;43m'
+nocolor='\033[0m'
 echo " "
+echo "    /^ ^\ "
+echo -e "   / ${red}0 0${nocolor} \  HI ${yellow}$Hostname${nocolor}"
+echo "   V\ Y /V "
+echo -e "    / - \   ${yellow}W00F W00F${nocolor}"
+echo "   /    | "
+echo -e "  V__) || "
+echo -e "${red}-----------------------------------${nocolor}"
 if [ "$(ls -d Windows)" = "Windows" ]
 then
 cd Windows/System32/config
 chntpw -l SAM | grep "|"
 echo " "
-echo "SELECT USER_NAME Properly  (e.g Crack_pathan :)"
+echo "SELECT USER_NAME Properly  (e.g Khan :)"
 read -p "==> " user
 clear
 sleep 2
@@ -25,15 +33,15 @@ reboot
 else
 echo " "
 echo " "
-echo "    Okay Good BYE ..."
+echo "..."
 fi
 else
-echo "-------------------------------------------------------"
-echo "RUN THIS SCRIPT IN WINDOWS PARTITION ¯\_(ツ)_/¯..."
-echo "-------------------------------------------------------"
+echo "---------------------------------------------"
+echo -e "Please Run In Windows Partition${red} ¯\_(ツ)_/¯${nocolor}"
+echo "---------------------------------------------"
 fi
 else
 echo " "
-echo "    RUN AS ROOT ¯\_(ツ)_/¯ "
+echo "    Run As Root ¯\_(ツ)_/¯ "
 echo " "
 fi
